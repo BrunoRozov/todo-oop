@@ -1,14 +1,12 @@
 import express from 'express'
 import bodyParser from 'body-parser'
 
+import todoRoutes from './routes/todos.js'
+
 const app = express()
 app.use(bodyParser.json())
 
-app.get('/json-test', (req, res) =>{
-    res.send({
-        message: 'json test ok'
-    })
-})
+app.use('/todos', todoRoutes)
 
 app.listen(6000, () => {
     console.log('server is connected at port 6000')
