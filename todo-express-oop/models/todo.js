@@ -1,5 +1,5 @@
 export class Todo {
-    construction(id, task){
+    constructor(id, task){
         this.id = id
         this.task = task
     } 

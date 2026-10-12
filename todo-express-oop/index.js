@@ -6,8 +6,10 @@ import todoRoutes from './routes/todos.js'
 const app = express()
 app.use(bodyParser.json())
 
+app.use(express.urlencoded({ extended: true }))
+
 app.use('/todos', todoRoutes)
 
-app.listen(6000, () => {
-    console.log('server is connected at port 6000')
+app.listen(3001, () => {
+    console.log('server is connected at port 3001')
 })

@@ -3,6 +3,6 @@ import { TodoController } from '../controllers/todos.js'
 
 const router = Router()
 
-router.post('/nre-todo', (req, res) => TodoController.createTodo(req, res))
+router.post('/new-todo', (req, res) => TodoController.createTodo(req, res))
 
 export default router

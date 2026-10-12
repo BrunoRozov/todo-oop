@@ -1,7 +1,7 @@
 import { Todo } from '../models/todo.js'
 
 class todoController {
-    consturctor(){
+    constructor(){
         //hold todo object in arry
         this.TODOS = [] 
     } 
