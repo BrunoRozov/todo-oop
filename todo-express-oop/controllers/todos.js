@@ -21,11 +21,11 @@ class todoController {
     } 
 
     async initTodos() {
-        const todosData = await fileManager.readFile('/data/todos.json')
+        const todosData = await fileManager.readFile('./data/todos.json')
         if(todosData !== null) {
             this.TODOS = todosData
         } else {
-            this.TODOS = [] 
+            this.TODOS = [] // kui ei saa data jäta tühjaks
         } 
     } 
 
