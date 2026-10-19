@@ -50,6 +50,8 @@ class todoController {
         } 
 
         this.TODOS[todoIndex] = new Todo(this.TODOS[todoIndex].id, updatedTask)
+        fileManager.writeFile('./data/todos.json', this.TODOS)
+        
         res.json({
             message: 'todo is updated',
             updatedTask: this.TODOS[todoIndex]
@@ -72,6 +74,7 @@ class todoController {
         }
 
         const deletedTask = this.TODOS.splice(todoIndex, 1)
+        fileManager.writeFile('./data/todos.json', this.TODOS)
 
         res.json({
             message: 'todo has been deleted',
